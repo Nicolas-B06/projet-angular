@@ -1,4 +1,4 @@
-import { Component, OnInit }  from '@angular/core';
+import { Component, OnInit, Input }  from '@angular/core';
 import { Product }            from './models/product.model';
 import { ProductsService }    from './services/products.service';
 
@@ -9,10 +9,14 @@ import { ProductsService }    from './services/products.service';
 })
 export class AppComponent implements OnInit{
   products!: Product[];
+  search: string = '';
+  title: string = '';
+  order: string ='';
+  constructor(private productsService: ProductsService) { }
 
-  constructor(private productsService : ProductsService) {}
-
-  ngOnInit(): void {
-      this.products = this.productsService.products;
-  }
+  ngOnInit() {
+    this.search = "";
+    this.products = this.productsService.getAllProducts();
+    this.title = "my HP app";
+}
 }

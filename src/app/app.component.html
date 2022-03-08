@@ -1,3 +1,22 @@
 <app-header></app-header>
-<app-product-card></app-product-card>
+
+<div>
+  Chercher : <input type="text" id="search" name="search" [(ngModel)]="search"/> <br>
+  Trier par : <select [(ngModel)]="order" >
+    <option value="asc">plus récent</option>
+    <option value="dsc">plus vieux</option>
+    <option value="A-Z">A-Z</option>
+    <option value="Z-A">Z-A</option>
+  </select>
+</div>
+<div class="products">
+  <div *ngIf="order === 'asc' ||order === 'dsc'">
+    <app-product-card *ngFor="let product of (products | sortByDate:order | filterByName:search)" [myProduct]="product"></app-product-card>
+  </div>
+  <div *ngIf="order === 'A-Z' ||order === 'Z-A'">
+    <app-product-card *ngFor="let product of (products | sortByName:order | filterByName:search)" [myProduct]="product"></app-product-card>
+  </div>
+  <div *ngIf="order === '' ">
+    <app-product-card *ngFor="let product of (products | filterByName:search)" [myProduct]="product"></app-product-card>
+  </div>
 <app-footer></app-footer>

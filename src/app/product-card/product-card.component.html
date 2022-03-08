@@ -1,1 +1,16 @@
-<p>product-card works!</p>
+
+<div class="root">
+  <h2>{{myProduct.title}}</h2>
+  <img  [src] ="myProduct.imageUrl" width="100">
+  <p>{{myProduct.description}}</p>
+  <p>{{myProduct.price}}</p>
+  <div>Date d'ajout: {{myProduct.date | date:'fullDate'}}</div>
+
+  <div class="price">
+    <b>{{myProduct.price}}€</b>
+  <p>
+    <!-- <b>{{myProduct.likes}} ♥</b>
+    <button (click)="onLike()">{{myProduct.isLiked ? 'unLike' : 'like'}}</button>
+  </p> -->
+
+</div>

@@ -12,17 +12,17 @@ export class ProductsService {
       1,
       "la classique",
       "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
-      "",
+      "https://static.fnac-static.com/multimedia/Images/5F/5F/5A/42/4348511-1505-1540-1/tsp20190910154120/Baguette-magique-35-cm-acceoire-magicien-sorcier.jpg",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-01'),
     ),
     new Product(
       2,
       "la croustillante (bio)",
-      "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
-      "",
+      "Pratique en cas de petit creux ",
+      "https://i.gifer.com/9Bzx.gif",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-05'),
     ),
     new Product(
       3,
@@ -54,7 +54,7 @@ export class ProductsService {
       "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
       "",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-08'),
     ),
     new Product(
       7,
@@ -62,7 +62,7 @@ export class ProductsService {
       "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
       "",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-08'),
     ),
     new Product(
       8,
@@ -70,7 +70,7 @@ export class ProductsService {
       "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
       "",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-09'),
     ),
     new Product(
       9,
@@ -78,7 +78,7 @@ export class ProductsService {
       "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
       "",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-09'),
     ),
     new Product(
       10,
@@ -86,7 +86,7 @@ export class ProductsService {
       "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
       "",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-09'),
     ),
     new Product(
       11,
@@ -94,7 +94,7 @@ export class ProductsService {
       "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
       "",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-10'),
     ),
     new Product(
       12,
@@ -102,7 +102,10 @@ export class ProductsService {
       "Simple, éfficace se range facilement dans une poche l'outil indispenseable pour impressionner en faisant aparaitre un lapin une coulombe ou des fleurs ...  ",
       "",
       [20],
-      new Date('2022-03-04'),
+      new Date('2022-03-10'),
     )
-  ]
+  ];
+  getAllProducts(): Product[] {
+    return this.products;
+  }
 }
