@@ -6,6 +6,8 @@ export class Product {
     public imageUrl: string,
     public price: Array<number>,
     public date: Date,
+    public favorite: number,
+    public isFavorite: boolean
     )
   {}
 }

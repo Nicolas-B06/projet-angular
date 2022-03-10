@@ -1,0 +1,33 @@
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.filter-products{
+  color: rgb(255, 208, 0);
+  font-weight: bold;
+  font-size: 18px;
+}
+.search-products{
+  color: rgb(255, 208, 0);
+  font-weight: bold;
+  font-size: 18px;
+}
+.select-box{
+  height: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+}

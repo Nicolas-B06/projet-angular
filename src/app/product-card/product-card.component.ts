@@ -12,4 +12,8 @@ export class ProductCardComponent {
   @Input() myProduct!: Product;
 
   constructor(private productsService: ProductsService) { }
+
+  onFavorite() {
+    this.productsService.onFavoriteProduct(this.myProduct)
+  }
 }

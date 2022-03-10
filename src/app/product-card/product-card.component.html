@@ -1,16 +1,16 @@
 
 <div class="root">
-  <h2>{{myProduct.title}}</h2>
-  <img  [src] ="myProduct.imageUrl" width="100">
+  <div class="product-card">
+  <img class="card-img"  [src] ="myProduct.imageUrl" width="100">
+  <h2 class="card-title">{{myProduct.title}}</h2>
   <p>{{myProduct.description}}</p>
-  <p>{{myProduct.price}}</p>
-  <div>Date d'ajout: {{myProduct.date | date:'fullDate'}}</div>
+
 
   <div class="price">
-    <b>{{myProduct.price}}€</b>
-  <p>
-    <!-- <b>{{myProduct.likes}} ♥</b>
-    <button (click)="onLike()">{{myProduct.isLiked ? 'unLike' : 'like'}}</button>
-  </p> -->
-
+    <p class="card-price">{{myProduct.price}}€</p>
+    <div class="product-add-fav"><b [ngStyle]="{ color: myProduct.favorite > 0 ? 'green' : 'red' }">{{myProduct.favorite}} ♥ </b>
+    <button class="card-fav-button" (click)="onFavorite()">{{myProduct.isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris'}}</button>
+    </div>
+    <p class="product-date"> Créée le: {{myProduct.date | date:'fullDate'}}</p>
+  </div>
 </div>
